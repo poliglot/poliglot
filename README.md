@@ -29,6 +29,9 @@ Reads the alignment corpus and extracts potential lemmas that are missing in the
 ### ``SelectSentences``
 Manually select alignments from the provided ``.tmx`` file. It can be obtained from [here](http://opus.lingfil.uu.se/). The dump is expected to provide German-Polish alignments for now. The purpose is to select viable sentences for each of the German adpositions defined in ``German.Adpositions``. Sentences are tagged with a flag indicating their fitness. It can be executed several times; all prior tagged sentences will be skipped over in this case.
 
+## See also
+[This document](https://github.com/tindzk/thesis) explains the underlying concepts and provides an analysis of the [German-Polish corpus](https://github.com/poliglot/parallel-de-pl) with regards to the annotation of adpositions.
+
 ## License
 Poliglot is licensed under the terms of the Apache v2.0 license.
 
