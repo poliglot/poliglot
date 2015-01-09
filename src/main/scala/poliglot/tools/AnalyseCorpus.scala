@@ -17,6 +17,8 @@ object AnalyseCorpus {
 
   def printAnalysis(corpus: TrainingCorpus.Translations) {
     var entities = 0
+    var totalTokensDe = 0
+    var totalTokensPl = 0
     var alignedEntities = 0
     var deps = 0
     val depth = mutable.ArrayBuffer.empty[Int]
@@ -25,6 +27,9 @@ object AnalyseCorpus {
     var alignedSentences = 0
 
     corpus.translations.zipWithIndex.foreach { case (tr, idx) =>
+      totalTokensDe += tr.source.tokens.size
+      totalTokensPl += tr.target.tokens.size
+
       val tks = tr.source.tokens.map(_.orth).mkString(" ")
       println(s"${idx + 1}: $tks")
 
@@ -58,6 +63,9 @@ object AnalyseCorpus {
     println(s"Depth (avg): ${avg(depth)}")
     println(s"Tokens (max): ${tokens.max}")
     println(s"Tokens (avg): ${avg(tokens)}")
+
+    println(s"German tokens (total): $totalTokensDe")
+    println(s"Polish tokens (total): $totalTokensPl")
   }
 
   def main(args: Array[String]) {
