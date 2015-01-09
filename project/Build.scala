@@ -9,7 +9,7 @@ object Build extends sbt.Build {
     "-unchecked", "-deprecation",
     "-encoding", "utf8")
 
-  lazy val main = Project(id = "thesis", base = file("."))
+  lazy val main = Project(id = "poliglot", base = file("."))
     .settings(
       resolvers ++= Seq(),
       libraryDependencies ++= Seq(
