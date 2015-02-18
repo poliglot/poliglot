@@ -6,7 +6,7 @@ Currently, it has language support for:
 - **German:** [RFTagger](http://www.cis.uni-muenchen.de/~schmid/tools/RFTagger/) tagset
 - **Polish:** [NKJP](http://nkjp.pl/) tagset, TCP bindings for [concraft-pl](https://github.com/kawu/concraft-pl)
 
-The language-specific tagsets are translated to a generic a class-based hierarchy.
+The language-specific tagsets are translated to a generic class-based hierarchy.
 
 ## Corpus creation and analysis
 Poliglot also ships the following tools for creating bilingual corpora and analysing annotations:
