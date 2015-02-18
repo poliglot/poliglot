@@ -114,7 +114,6 @@ object MorphAttribute {
   trait Clitic extends MorphAttribute
   object Clitic {
     /* French: t', s'
-     * Polish:
      */
     case object Proclitic extends Clitic
 
